@@ -1,0 +1,31 @@
+stages:
+  preprocess:
+    cmd: python3 scripts/preprocess.py
+    deps:
+      - data/raw/data.csv
+      - scripts/preprocess.py
+    params:
+      - preprocess
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
+
+  train:
+    cmd: python3 scripts/train.py
+    deps:
+      - data/processed/train.csv
+      - scripts/train.py
+    params:
+      - train
+    outs:
+      - models/classifier.pkl
+
+  evaluate:
+    cmd: python3 scripts/evaluate.py
+    deps:
+      - models/classifier.pkl
+      - data/processed/test.csv
+      - scripts/evaluate.py
+    metrics:
+      - metrics/scores.json:
+          cache: false
