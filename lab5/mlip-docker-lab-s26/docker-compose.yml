@@ -1,0 +1,32 @@
+services:
+  training:
+    # TODO: Build the container using the training Dockerfile
+    build:
+      context: .
+      dockerfile: docker/training/Dockerfile
+    # TODO: Mount the named volume 'wine_model_storage' to /app/models
+    volumes:
+      - wine_model_storage:/app/models
+    restart: on-failure
+
+  inference:
+    # TODO: Build the container using the inference Dockerfile
+    build:
+      context: .
+      dockerfile: docker/inference/Dockerfile
+    # TODO: Mount the named volume 'wine_model_storage' to /app/models
+    # TODO: Add a bind mount mapping ./logs on the host to /app/logs in the container
+    volumes:
+      - wine_model_storage:/app/models
+      - ./logs:/app/logs
+    # TODO: Expose port 8080 for the Flask app
+    ports:
+      - "8081:8080"
+    # Ensure that the inference service starts after the training service
+    depends_on:
+      - training
+    restart: on-failure
+
+# TODO: Define the named volume 'wine_model_storage'
+volumes:
+  wine_model_storage:

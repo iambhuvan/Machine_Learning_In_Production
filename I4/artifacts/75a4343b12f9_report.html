@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<title>Eye Screening Results</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<style>
+  body { font-family: Arial, sans-serif; font-size: 18px; line-height: 1.6; }
+  .notice { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; margin: 15px 0; }
+  .result-box { background-color: #e8f5e9; padding: 15px; border-left: 5px solid #4caf50; margin: 15px 0; font-size: 20px; }
+  .next-steps { background-color: #e3f2fd; padding: 15px; border-left: 5px solid #2196f3; margin: 15px 0; }
+  .disclaimer { background-color: #ffebee; padding: 15px; border-left: 5px solid #f44336; margin: 15px 0; }
+  .image-row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin: 20px 0; }
+  .image-box { text-align: center; }
+  .image-box img { max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; }
+  .image-box p { font-size: 14px; color: #555; margin-top: 5px; }
+  h2 { color: #333; border-bottom: 2px solid #2196f3; padding-bottom: 5px; }
+  h3 { color: #555; }
+</style>
+</head>
+<body>
+<div class="w3-content w3-padding-large w3-margin-top" style="max-width: 900px;">
+
+  <div class="w3-padding-large w3-margin-top">
+    <h1 class="w3-center">Eye Screening Results</h1>
+    <hr>
+
+    <!-- Automation Disclosure -->
+    <div class="notice">
+      <strong>Notice for the health worker:</strong> This screening was performed by a computer program (artificial intelligence), not a doctor. Please communicate this to the patient and emphasize that a doctor should confirm the result.
+    </div>
+
+    <!-- Patient Information -->
+    <h2>Patient Information</h2>
+    <p><strong>Patient ID:</strong> 75a4343b12f9</p>
+    <p><strong>Age:</strong> 22</p>
+    <p><strong>Gender:</strong> Female</p>
+
+    <!-- How This Screening Works -->
+    <h2>How This Screening Works</h2>
+    <p><em>Read or paraphrase this to the patient:</em></p>
+    <p>A photo was taken of the back of the patient's eye using a smartphone with a special lens. A computer program analyzed the photo for signs of blood vessel damage that can be caused by diabetes.</p>
+
+    <!-- Who Is Involved -->
+    <h2>Who Is Involved in This Decision</h2>
+    <ul>
+      <li><strong>You</strong> (the health worker) took the eye photo.</li>
+      <li>A <strong>computer program</strong> analyzed it.</li>
+      <li>A <strong>doctor</strong> should confirm the result before any treatment decisions.</li>
+    </ul>
+
+    <!-- What Data Was Used -->
+    <h2>What Data Was Used</h2>
+    <p>The computer used <strong>only the eye photo</strong> to produce the screening result. The model does not use age or gender for its analysis. Age and gender are recorded in the patient's medical file for clinical context only.</p>
+
+    <!-- Screening Result -->
+    <div class="result-box">
+      <h2 style="border: none; margin-top: 0;">Screening Result: Mild</h2>
+      <p>The screening found mild signs of diabetic eye damage. This means there may be small changes in the blood vessels in your eye.</p>
+    </div>
+
+    <!-- Eye Images -->
+    <h2>Eye Photo and Computer Focus Area</h2>
+    <div class="image-row">
+      <div class="image-box">
+        <img src="75a4343b12f9_original.png" alt="Patient eye photo">
+        <p>Patient's eye photo</p>
+      </div>
+      <div class="image-box">
+        <img src="75a4343b12f9_gradcam.png" alt="Areas the computer focused on">
+        <p>The colored areas show where the computer<br>looked most closely. Red and yellow indicate<br>areas of higher attention.</p>
+      </div>
+    </div>
+
+    <!-- Confidence Chart -->
+    <h2>Computer Confidence</h2>
+    <img src="75a4343b12f9_confidence.png" alt="Confidence chart" class="w3-image" style="max-width: 600px; width: 100%; display: block; margin: 0 auto;">
+    <p>The computer gave this result a low score (40 out of 100). The computer was not very certain, so please see a doctor for a full exam to confirm.</p>
+
+    <!-- What To Do Next -->
+    <div class="next-steps">
+      <h2 style="border: none; margin-top: 0;">Recommended Action</h2>
+      <p><em>Communicate the following to the patient:</em></p>
+      <p>Please see an eye doctor for a full eye exam. Early changes were found, and a doctor can tell you more. Keep managing your blood sugar and attend regular checkups.</p>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <strong>Reminder:</strong> This is a screening tool only. It does not replace a full eye exam by a doctor. Please refer the patient to a medical professional for a complete evaluation.
+    </div>
+
+  </div>
+
+</div>
+</body>
+</html>

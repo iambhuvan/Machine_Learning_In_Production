@@ -1,0 +1,8 @@
+#!/usr/bin/expect -f
+set timeout 60
+spawn ssh -o ServerAliveInterval=60 -L 9092:localhost:9092 tunnel@128.2.220.241 -NTf
+expect {
+  "Are you sure you want to continue connecting" { send "yes\r"; exp_continue }
+  "password:" { send "mlip-kafka\r" }
+}
+expect eof

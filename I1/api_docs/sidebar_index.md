@@ -1,0 +1,32 @@
+## Integrations
+
+* [Overview](/api/integrations-overview)
+* [Incoming webhook integrations](https://zulip.readthedocs.io/en/latest/webhooks/incoming-webhooks-overview.html)
+* [Hello world walkthrough](https://zulip.readthedocs.io/en/latest/webhooks/incoming-webhooks-walkthrough.html)
+* [Non-webhook integrations](/api/non-webhook-integrations)
+
+## Interactive bots
+
+* [Writing bots](/api/writing-bots)
+* [Interactive bots API](/api/interactive-bots-api)
+* [Writing tests for bots](/api/writing-tests-for-interactive-bots)
+* [Running bots](/api/running-bots)
+* [Deploying bots](/api/deploying-bots)
+* [Outgoing webhooks](/api/outgoing-webhooks)
+
+## REST API
+
+* [Overview](/api/rest)
+* [Installation instructions](/api/installation-instructions)
+* [API keys](/api/api-keys)
+* [Configuring the Python bindings](/api/configuring-python-bindings)
+* [HTTP headers](/api/http-headers)
+* [Error handling](/api/rest-error-handling)
+* [Roles and permissions](/api/roles-and-permissions)
+* [Group-setting values](/api/group-setting-values)
+* [Message formatting](/api/message-formatting)
+* [Zulip URLs](/api/zulip-urls)
+* [Client libraries](/api/client-libraries)
+* [API changelog](/api/changelog)
+
+{!rest-endpoints.md!}

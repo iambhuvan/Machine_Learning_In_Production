@@ -1,0 +1,28 @@
+.vscode/
+.env
+node_modules
+assignment/agent/messages.log
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Runtime logs
+python/agent/messages.log
+
+# Working/scratch files
+todo.md
+smoke_*.log
+hardening_example1_messages.log
+hardening_example1_messages_final.log
+hardening_example1_messages_fixed.log
+hardening_example1_messages_fixed2.log
+hardening_example2_messages.log
+hardening_example2_messages_fixed.log
+hardening_example2_messages_fixed2.log

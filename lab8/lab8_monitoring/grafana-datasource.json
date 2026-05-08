@@ -1,0 +1,9 @@
+{
+  "name": "Prometheus",
+  "type": "prometheus",
+  "uid": "prometheus-lab8",
+  "access": "proxy",
+  "url": "http://prometheus:9090",
+  "isDefault": true,
+  "basicAuth": false
+}
